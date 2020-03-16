@@ -1,0 +1,114 @@
+:root {
+    --text-color: #eeeda9;
+    --background-color: #5e7449;
+    --accent-color: #ffc29774;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f8dc;
+    font-family: "Baloo Chettan 2", cursive;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    padding-top: 0px;
+}
+
+.navbar_logo {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.navbar_logo i {
+    color: var(--accent-color);
+    font-size: 24px;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+.navbar_toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+.fa-twitter {
+    color: rgba(143, 240, 235, 0.867);
+}
+
+.fa-facebook-f {
+    color: #6098c5;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+        padding-top: 4px;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar_toggleBtn {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
+
